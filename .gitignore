@@ -1,0 +1,17 @@
+# Bare Bones
+node_modules
+package-lock.json
+secrets.json
+
+# Logs
+logs
+
+# Testing Stuff
+testing
+testing.js
+
+# Cache
+cache
+
+# Todo
+todo

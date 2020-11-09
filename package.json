@@ -1,0 +1,24 @@
+{
+  "name": "wiz",
+  "version": "1.0.0",
+  "description": "An attempt to revive the wonderful, yet dead wiz bot",
+  "main": "index.js",
+  "dependencies": {
+    "ascii-table": "^0.0.9",
+    "common-tags": "^1.8.0",
+    "fs": "^0.0.1-security",
+    "moment": "^2.29.1",
+    "mongoose": "^5.10.11",
+    "path": "^0.12.7",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wiz"
+  ],
+  "author": "Dhruvin",
+  "license": "AGPL-3.0"
+}
