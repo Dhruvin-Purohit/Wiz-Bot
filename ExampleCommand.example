@@ -1,10 +1,11 @@
-const WizCommand = require('./WizCommand.js')
+const WizCommand = require('../WizCommand.js')
 
 module.exports = class ExampleCommand extends WizCommand {
      constructor(client) {
           super(client, {
-               triggers: [""],
-               usage: "",
+               name: "",
+               aliases: [""],
+               usage: "wtf",
                minargs: Number,
                missingargs: "You are missing some arguements, mate",
                description: "Example Command Not to be used.",

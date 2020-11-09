@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js');
-const permissions = require('../helpers/permissions.json');
+const permissions = require('../secondary/permissions.json');
 
 /**
  * Wiz's Custom Comamnd Class
@@ -23,10 +23,16 @@ class WizCommand {
     this.client = client;
 
     /**
-     * Triggers of the command
-     * @type {Array<String>}
+     * Command Name
+     * @type {string}
      */
-    this.triggers = options.triggers;
+    this.name = options.name;
+
+    /**
+     * Command Alias(es)
+     * @type {Array<string>}
+     */
+    this.aliases = options.aliases || null;
 
     /**
      * Minimum Amount of Arguements required
@@ -39,12 +45,6 @@ class WizCommand {
      * @type {String}
      */
     this.missingargs = options.missingargs
-
-     /**
-      * Common Name of the command (should be from triggers only.)
-      * @type {String}
-      */
-     this.name = options.triggers[0];
 
     /**
      * The arguments for the command
@@ -112,7 +112,7 @@ class WizCommand {
           return message.channel.send(this.missingargs);
         }
 
-     if (this.minargs && args.length < this.minArgs) {
+     if (this.minargs && args.length < this.minargs) {
           return message.channel.send(this.missingargs);
         }
 
@@ -257,36 +257,36 @@ class WizCommand {
     if (typeof options !== 'object') throw new TypeError('Command options is not an Object');
 
     // Name
-    if (typeof options.name !== 'String') throw new TypeError('Command name is not a String');
+    if (typeof options.name !== 'string') throw new TypeError('Command name is not a string');
     if (options.name !== options.name.toLowerCase()) throw new Error('Command name is not lowercase');
 
-    // Triggers
-    if (options.triggers){
-         if(!Array.isArray(options.triggers) || options.triggers.some(t => typeof t !== 'String'))
-         {
-              throw new TypeError('Command triggers is not an Array')
-         }
-         if (options.triggers.some(t => t !== t.toLowerCase()))
-        throw new RangeError('Command triggers are not lowercase');
+    // Aliases
+    if (options.aliases) {
+      if (!Array.isArray(options.aliases) || options.aliases.some(ali => typeof ali !== 'string'))
+        throw new TypeError('Command aliases is not an Array of strings');
 
-      for (const t of options.triggers) {
-        if (client.triggers.get(t)) throw new Error('Command trigger already exists');
+      if (options.aliases.some(ali => ali !== ali.toLowerCase()))
+        throw new RangeError('Command aliases are not lowercase');
+
+      for (const alias of options.aliases) {
+        if (client.aliases.get(alias)) throw new Error('Command alias already exists');
       }
-  }
+    }
 
     // Usage
-    if (options.usage && typeof options.usage !== 'String') throw new TypeError('Command usage is not a String');
+    if (options.usage && typeof options.usage !== 'string')
+      throw new TypeError('Command usage is not a String');
 
     // Description
-    if (options.description && typeof options.description !== 'String') 
+    if (options.description && typeof options.description !== 'string') 
       throw new TypeError('Command description is not a String');
     
     // Minuimum Arguements
-    if (options.minargs && typeof options.minargs !== 'Number') 
+    if (options.minargs && typeof options.minargs !== 'number') 
     throw new TypeError('Command Minimum Arguements is not a Number');
 
     // Missing Arguements
-    if (options.missingargs && typeof options.missingargs !== 'String') 
+    if (options.missingargs && typeof options.missingargs !== 'string') 
     throw new TypeError('Command Missing Arguements is not a String');
 
     // Client permissions
@@ -314,15 +314,15 @@ class WizCommand {
       throw new TypeError('Command examples is not an Array of permission key Strings');
 
     // Owner only
-    if (options.ownerOnly && typeof options.ownerOnly !== 'Boolean') 
+    if (options.ownerOnly && typeof options.ownerOnly !== 'boolean') 
       throw new TypeError('Command ownerOnly is not a Boolean');
 
     // Dev only
-    if (options.devonly && typeof options.devonly != 'Boolean')
+    if (options.devonly && typeof options.devonly != 'boolean')
       throw new TypeError('Command devonly is not a Boolean')
 
     // Disabled
-    if (options.disabled && typeof options.disabled !== 'Boolean') 
+    if (options.disabled && typeof options.disabled !== 'boolean') 
       throw new TypeError('Command disabled is not a Boolean');
   }
 

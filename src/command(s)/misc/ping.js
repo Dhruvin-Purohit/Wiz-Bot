@@ -1,10 +1,10 @@
 const { MessageEmbed } = require('discord.js');
 const WizCommand = require('../WizCommand.js')
 
-module.exports = class PingCommand extends WizCommand {
+module.exports = class MiscCommand extends WizCommand {
      constructor(client) {
      super(client, {
-     triggers: ['ping'],
+     name: 'ping',
      usage: 'ping',
      description: 'Get WIz\'s Latency'
      });

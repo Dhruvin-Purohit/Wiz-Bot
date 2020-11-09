@@ -28,10 +28,17 @@ class Client extends Discord.Client{
            */
           this.mongodburi = secrets.database.mongouri
 
-          /**
-           * Command Triggers Collection
+          /** 
+           * Collection of commands
+           * @type {Collection<string, Command>}
            */
-          this.trigger = new Discord.Collection()
+          this.commands = new Discord.Collection();
+
+          /** 
+          * Collection of command aliases
+           * @type {Collection<string, Command>}
+           */
+          this.aliases = new Discord.Collection();
 
           /**
            * Bot's Login token
@@ -99,30 +106,33 @@ class Client extends Discord.Client{
    loadCommands(path) {
      this.logger.info('Command Initiation started...');
      let table = new AsciiTable('Commands');
-     table.setHeading('File', 'Command', '---');
-     readdirSync(path).filter( file => !file.endsWith('.js')).forEach( dir => {
-       const commands = readdirSync(resolve(__basedir, join(path, dir))).filter(file => file.endsWith('js'));
-       commands.forEach(file => {
-         const Command = require(resolve(__basedir, join(path, dir, file)));
-         const command = new Command(this); // Instantiate the specific command
-         if (command.triggers && !command.disabled) {
-           // Map command
-           let triggers;
-             command.triggers.forEach(triggers => {
-               this.triggers.set(triggers, command);
-             });
-             triggers = command.triggers.join(', ');
-             
-           table.addRow(file, command.triggers, '(+)');
-         } else {
-           this.logger.warn(`${file} not loaded`);
-           table.addRow(file, '', '', '(-)');
-           return;
-         }
-       });
-     });
-     this.logger.info(`\n${table.toString()}`);
-     return this;
+    table.setHeading('File', 'Aliases', 'Status');
+    readdirSync(path).filter( f => !f.endsWith('.js')).forEach( dir => {
+      const commands = readdirSync(resolve(__basedir, join(path, dir))).filter(f => f.endsWith('js'));
+      commands.forEach(f => {
+        const Command = require(resolve(__basedir, join(path, dir, f)));
+        const command = new Command(this); // Instantiate the specific command
+        if (command.name && !command.disabled) {
+          // Map command
+          this.commands.set(command.name, command);
+          // Map command aliases
+          let aliases = '';
+          if (command.aliases) {
+            command.aliases.forEach(alias => {
+              this.aliases.set(alias, command);
+            });
+            aliases = command.aliases.join(', ');
+          }
+          table.addRow(f, aliases, '(o)');
+        } else {
+          this.logger.warn(`${f} failed to load`);
+          table.addRow(f, '', '', '( )');
+          return;
+        }
+      });
+    });
+    this.logger.info(`\n${table.toString()}`);
+    return this;
    }
 
    /**

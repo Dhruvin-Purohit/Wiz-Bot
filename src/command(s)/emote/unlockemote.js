@@ -1,9 +1,10 @@
-const WizCommand = require('./WizCommand.js')
+const WizCommand = require('../WizCommand.js')
 
-module.exports = class LockEmoteCommand extends WizCommand {
+module.exports = class EmoteCommand extends WizCommand {
      constructor(client) {
           super(client, {
-               triggers: ["unlockemote", "unlockemoji", "emojiunlock", "emoteunlock"],
+               name: 'unlockemote',
+               aliases: ["unlockemoji", "emojiunlock", "emoteunlock"],
                usage: "unlockemote <emote or emote_id>",
                minargs: 1,
                missingargs: "Specify what emote you want to unlock",
