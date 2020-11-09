@@ -17,7 +17,7 @@ module.exports = class ExampleCommand extends WizCommand {
 
           })
      }
-     async run() {
+     async run(message, args) {
           console.log('This Works!')
      }
 }
