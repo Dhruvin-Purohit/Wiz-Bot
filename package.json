@@ -1,0 +1,35 @@
+{
+  "name": "tropical-slime",
+  "version": "1.0.0",
+  "description": "Tropical Slime(Bot) does mod stuff and all",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://https://github.com/Tropical-Slime-Discord-Bot/Tropical-Slime-Discord-Bot.git"
+  },
+  "keywords": [
+    "Tropical Slime",
+    "Bot"
+  ],
+  "author": "Dhruvin Purohit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://https://github.com/Tropical-Slime-Discord-Bot/Tropical-Slime-Discord-Bot/issues"
+  },
+  "homepage": "https://https://github.com/Tropical-Slime-Discord-Bot/Tropical-Slime-Discord-Bot#readme",
+  "dependencies": {
+    "ascii-table": "0.0.9",
+    "common-tags": "^1.8.0",
+    "discord.js": "^12.4.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.10.11",
+    "ms": "^2.1.2",
+    "node-schedule": "^1.3.2",
+    "path": "^0.12.7",
+    "util": "^0.12.3",
+    "winston": "^3.3.3"
+  }
+}

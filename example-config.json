@@ -1,0 +1,15 @@
+{
+    "token": "your-bot-token-here",
+    "ownerid": "your-id-here",
+    "invite": "your-bot-invite-like-here",
+    "prefix": "your_default_prefix_here",
+    "support": "your_server_invite_here",
+    "github": "your_github_repository_url_here",
+    "mongodbURL": "your_mongo_db_URL_here",
+    "bugID": "your-bug-channel-id-here",
+    "feedbackID": "your-feedback-channel-id-here",
+    "logID": "your-log-channel-id-here",
+    "cocapi": "your_coc_api_key_here",
+    "crapi":"your_cr_api_key_here",
+    "bsapi": "yout_bs_api_key_here"
+}
