@@ -19,13 +19,13 @@
 [Invite](https://discord.com/api/oauth2/authorize?client_id=775355838402920498&permissions=8&redirect_uri=https%3A%2F%2Fdiscord.gg%2F2VKjp5P3P2&scope=bot)
 
 ### Suggestions?
-Just open an issue [here](githuburihere)
+Just open an issue [here](https://github.com/Dhruvin-Purohit/Wiz-Bot)
 
 ### Bugs?
-Use the bug command or open an issue [here](githuburihere)
+Use the bug command or open an issue [here](https://github.com/Dhruvin-Purohit/Wiz-Bot)
 
 ### Want to contribute?
-Just open a Pull request [here](githuburihere) and i will review it(You will also be credited if it is major).
+Just open a Pull request [here](https://github.com/Dhruvin-Purohit/Wiz-Bot) and i will review it(You will also be credited if it is major).
 
 ### Need more help?
 Join the [support server](https://discord.gg/2VKjp5P3P2)
