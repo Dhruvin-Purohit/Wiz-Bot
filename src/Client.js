@@ -66,38 +66,37 @@ class Client extends Discord.Client{
            * Channels
            * @type {Object}
            */
-          this.channels = secrets.channels
+          this.logchannels = secrets.channels
 
           /**
            * Functions
            * @type {Object}
            */
-          this.functions = require('./secondary/functions.js')
+          this.fns = require('./secondary/functions.js')
 
      }
 
-     
   /**
-   * Load Available Events.
+   * Load all of the available events
    * @param {string} path 
    */
   loadEvents(path) {
-     readdir(path, (err, files) => {
-       if (err) this.logger.error(err);
-       files = files.filter(f => f.split('.').pop() === 'js');
-       if (files.length === 0) return this.logger.warn('There are no events..');
-       this.logger.info(`${files.length} event(s) found...`);
-       files.forEach(f => {
-         const eventName = f.subString(0, f.indexOf('.'));
-         const event = require(resolve(__basedir, join(path, f)));
-         super.on(eventName, event.bind(null, this));
-         delete require.cache[require.resolve(resolve(__basedir, join(path, f)))]; // Clean the cache
-         this.logger.info(`${eventName} Loading...`);
-       });
-     });
- 
-     return this;
-   }
+    readdir(path, (err, files) => {
+      if (err) this.logger.error(err);
+      files = files.filter(f => f.split('.').pop() === 'js');
+      if (files.length === 0) return this.logger.warn('No events found');
+      this.logger.info(`${files.length} event(s) found...`);
+      files.forEach(f => {
+        const eventName = f.substring(0, f.indexOf('.'));
+        const event = require(resolve(__basedir, join(path, f)));
+        super.on(eventName, event.bind(null, this));
+        delete require.cache[require.resolve(resolve(__basedir, join(path, f)))]; // Clear cache
+        this.logger.info(`Loading event: ${eventName}`);
+      });
+    });
+
+    return this;
+  }
  
    /**
     * Loads Available commands
@@ -181,6 +180,7 @@ class Client extends Discord.Client{
     */
    isDev(user) {
         if (this.devs.includes(user.id)) return true;
+        else if (this.owners.includes(user.id)) return true;
         else return false;
    }
  

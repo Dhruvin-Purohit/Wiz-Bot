@@ -222,28 +222,6 @@ class WizCommand {
 
     } else return true;
   }
-  
-  /**
-   * Creates and sends command failure embed
-   * @param {Message} message
-   * @param {int} errorType
-   * @param {String} reason 
-   * @param {String} errorMessage 
-   */
-  sendErrorMessage(message, errorType, reason, errorMessage = null) {
-    errorType = this.errorTypes[errorType];
-    const prefix = message.client.db.settings.selectPrefix.pluck().get(message.guild.id);
-    const embed = new MessageEmbed()
-      .setAuthor(`${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))
-      .setTitle(`${fail} Error: \`${this.name}\``)
-      .setDescription(`\`\`\`diff\n- ${errorType}\n+ ${reason}\`\`\``)
-      .addField('Usage', `\`${prefix}${this.usage}\``)
-      .setTimestamp()
-      .setColor(message.guild.me.displayHexColor);
-    if (this.examples) embed.addField('Examples', this.examples.map(e => `\`${prefix}${e}\``).join('\n'));
-    if (errorMessage) embed.addField('Error Message', `\`\`\`${errorMessage}\`\`\``);
-    message.channel.send(embed);
-  }
 
   /**
    * Validates all options provided

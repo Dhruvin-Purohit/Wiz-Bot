@@ -13,12 +13,6 @@ const Guild = mongoose.Schema({
             default: 'wiz',
             required: true
         },
-        messagelogid: {
-             type: String
-        },
-        joinleavelogid: {
-             type: String
-        },
         noinvite: {
              type: Boolean,
              default: false,
@@ -26,6 +20,9 @@ const Guild = mongoose.Schema({
         },
         muteroleid: {
             type: String
+        },
+        autoroleid: {
+             type: String
         }
 })
 

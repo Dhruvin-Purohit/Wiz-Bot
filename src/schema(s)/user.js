@@ -7,15 +7,6 @@ const User = mongoose.Schema({
             type: Boolean,
             default: false,
             required: true
-        },
-        coctag: {
-            type: String
-        },
-        crtag: {
-            type: String
-        },
-        bstag: {
-            type: String
         }
 })
 

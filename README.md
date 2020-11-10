@@ -4,7 +4,8 @@
 ## Why Wiz?
 
 * Get your **SUPERCELL** games stats in one bot (clash of clans, clash royale, brawl stars)
-* **Moderation**: *almost* all you need (kick, ban, lock, purge, etc.)
+* Link your **SUPERCELL** games to yourself (Can have different for each Server!!!)
+* **Moderation**: *almost* all you need (kick, ban, lock, warnings, purge, etc.)
 * No need to even *memorize* your player tags, just link them to your account
 * Want to **lock emotes to certain roles?**, we have it
 * **Message logs** (optional)
@@ -15,7 +16,7 @@
 
 
 ### Consider Inviting Wiz?
-[Invite](invitelinkhere)
+[Invite](https://discord.com/api/oauth2/authorize?client_id=775355838402920498&permissions=8&redirect_uri=https%3A%2F%2Fdiscord.gg%2F2VKjp5P3P2&scope=bot)
 
 ### Suggestions?
 Just open an issue [here](githuburihere)
@@ -27,7 +28,7 @@ Use the bug command or open an issue [here](githuburihere)
 Just open a Pull request [here](githuburihere) and i will review it(You will also be credited if it is major).
 
 ### Need more help?
-Join the [support server](supportserverhere)
+Join the [support server](https://discord.gg/2VKjp5P3P2)
 
 ### Self Hosting the bot
 The code is here for transparency and learning purposes. And i do not encourage self hosting the bot.

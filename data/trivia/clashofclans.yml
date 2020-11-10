@@ -1,0 +1,325 @@
+questions:
+- question: Which TownHall level unlocks **Archer Tower**?
+  answers:
+  - 2
+  - two
+  - th2
+- question: Which TownHall level unlocks **Mortar**?
+  answers:
+  - 3
+  - three
+  - th3
+- question: Which TownHall level unlocks **Air defense**?
+  answers:
+  - 4
+  - four
+  - th4
+- question: Which TownHall level unlocks **Wizard Tower**?
+  answers:
+  - 5
+  - five
+  - th5
+- question: Which TownHall level unlocks **Air Sweeper**?
+  answers:
+  - 6
+  - six
+  - th6
+- question: Which TownHall level unlocks **Hidden Tesla**?
+  answers:
+  - 7
+  - seven
+  - th7
+- question: Which TownHall level unlocks **Bomb Tower**?
+  answers:
+  - 8
+  - eight
+  - th8
+- question: Which TownHall level unlocks **X-Bow**?
+  answers:
+  - 9
+  - nine
+  - th9
+- question: Which TownHall level unlocks **Inferno Tower**?
+  answers:
+  - 10
+  - ten
+  - th10
+- question: Which TownHall level unlocks **Eagle Artillery**?
+  answers:
+  - 11
+  - elleven
+  - th11
+- question: Which TownHall level unlocks **Giga Tesla**?
+  answers:
+  - 12
+  - twelve
+  - th12
+- question: Which Townhall level unlocks **Giga Inferno**?
+  anwers:
+  - 13
+  - thirteen
+  - th13
+- question: Which TownHall level unlocks **Scattershot**?
+  answers:
+  - 13
+  - thirteen
+  - th13
+- question: Which TownHall level unlocks **Laboratory**?
+  answers:
+  - 3
+  - three
+  - th3
+- question: Which TownHall level unlocks **Spell Factory**?
+  answers:
+  - 5
+  - five
+  - th5
+- question: Which TownHall level unlocks **Dark Barracks**?
+  answers:
+  - 7
+  - seven
+  - th7
+- question: Which TownHall level unlocks **Dark Spell Factory**?
+  answers:
+  - 8
+  - eight
+  - th8
+- question: Which TownHall level unlocks **Super Troops(& the Super Troop Barrel)**?
+  answers:
+  - 11
+  - elleven
+  - th11
+- question: Which TownHall level unlocks **Workshop**?
+  answers:
+  - 12
+  - twelve
+  - th12
+- question: Which TownHall level unlocks **Dark Elixir**?
+  answers:
+  - 7
+  - seven
+  - th7
+- question: Which TownHall level unlocks **Clan Castle**(considering only free 2 play players)?
+  answers:
+  - 3
+  - three
+  - th3
+- question: Which TownHall level unlocks **Boat**?
+  answers:
+  - 4
+  - four
+  - th4
+- question: Which TownHall level unlocks **Clan Games**?
+  answers:
+  - 6
+  - six
+  - th6
+- question: Which TownHall level unlocks **Strongman's Caravan**?
+  answers:
+  - 6
+  - six
+  - th6
+- question: Which TownHall level unlocks **Barbarian King**?
+  answers:
+  - 7
+  - seven
+  - th7
+- question: Which TownHall level unlocks **Archer Queen**?
+  answers:
+  - 9
+  - nine
+  - th9
+- question: Which TownHall level unlocks **Grand Warden**?
+  answers:
+  - 11
+  - elleven
+  - th11
+- question: Which TownHall level unlocks **Royal Champion**?
+  answers:
+  - 13
+  - thirteen
+  - th13
+- question: What level of clan castle unlocks storage for spells(worth 1 housing space)?
+  answers:
+  - 4
+  - four
+- question: What level of clan castle unlocks extra storage for spells(worth 2 housing space)?
+  answers:
+  - 7
+  - seven
+- question: What level of clan castle unlocks housing space for seige machines?
+  answers:
+  - 6
+  - six
+- question: What is the housing space of **Barbarian**?
+  answers:
+  - 1
+  - one
+- question: What is the housing space of **Archer**?
+  answers:
+  - 1
+  - one
+- question: What is the housing space of **Giant**?
+  answers:
+  - 5
+  - five
+- question: What is the housing space of **Goblin**?
+  answers:
+  - 1
+  - one
+- question: What is the housing space of **Wall Breaker**?
+  answers:
+  - 2
+  - two
+- question: What is the housing space of **Balloon**?
+  answers:
+  - 5
+  - five
+- question: What is the housing space of **Wizard**?
+  answers:
+  - 4
+  - four
+- question: What is the housing space of **Healer**?
+  answers:
+  - 14
+  - fourteen
+- question: What is the housing space of **Dragon**?
+  answers:
+  - 20
+  - twenty
+- question: What is the housing space of **P.E.K.K.A**?
+  answers:
+  - 25
+  - twentyfive
+- question: What is the housing space of **Baby Dragon**?
+  answers:
+  - 10
+  - ten
+- question: What is the housing space of **Miner**?
+  answers:
+  - 6
+  - six
+- question: What is the housing space of **Electro Dragon**?
+  answers:
+  - 30
+  - thrity
+- question: What is the housing space of **Yeti**?
+  answers:
+  - 18
+  - eighteen
+- question: What is the housing space of **Minion**?
+  answers:
+  - 2
+  - two
+- question: What is the housing space of **Hog Rider**?
+  answers:
+  - 5
+  - five
+- question: What is the housing space of **Valkyrie**?
+  answers:
+  - 8
+  - eight
+- question: What is the housing space of **Golem**?
+  answers:
+  - 30
+  - thrity
+- question: What is the housing space of **Witch**?
+  answers:
+  - 12
+  - twelve
+- question: What is the housing space of **Lava Hound**?
+  answers:
+  - 30
+  - thrity
+- question: What is the housing space of **Bowler**?
+  answers:
+  - 6
+  - six
+- question: What is the housing space of **Ice Golem**?
+  answers:
+  - 15
+  - fifteen
+- question: What is the housing space of **Headhunter**?
+  answers:
+  - 6
+  - six
+- question: What is the housing space of **Super Barbarian**?
+  answers:
+  - 5
+  - five
+- question: What is the housing space of **Super Archer**?
+  answers:
+  - 12
+  - twelve
+- question: What is the housing space of **Super Giant**?
+  answers:
+  - 10
+  - ten
+- question: What is the housing space of **Sneaky Goblin**?
+  answers:
+  - 3
+  - three
+- question: What is the housing space of **Super Wall Breaker**?
+  answers:
+  - 8
+  - eight
+- question: What is the housing space of **Inferno Dragon**?
+  answers:
+  - 15
+  - fifteen
+- question: What is the housing space of **Super Minion**?
+  answers:
+  - 12
+  - twelve
+- question: What is the housing space of **Super Valkyrie**?
+  answers:
+  - 20
+  - twenty
+- question: What is the housing space of **Super Witch**?
+  answers:
+  - 40
+  - forty
+- question: What is the housing space of **Lightning Spell**?
+  answers:
+  - 1
+  - one
+- question: What is the housing space of **Healing Spell**?
+  answers:
+  - 2
+  - two
+- question: What is the housing space of **Rage Spell**?
+  answers:
+  - 2
+  - two
+- question: What is the housing space of **Jump Spell**?
+  answers:
+  - 2
+  - two
+- question: What is the housing space of **Freeze Spell**?
+  answers:
+  - 1
+  - one
+- question: What is the housing space of **Clone Spell**?
+  answers:
+  - 3
+  - three
+- question: What is the housing space of **Poision Spell**?
+  answers:
+  - 1
+  - one
+- question: What is the housing space of **Earthqake Spell**?
+  answers:
+  - 1
+  - one
+- question: What is the housing space of **Haste Spell**?
+  answers:
+  - 1
+  - one
+- question: What is the housing space of **Skeleton Spell**?
+  answers:
+  - 1
+  - one
+- question: What is the housing space of **Bat Spell**?
+  answers:
+  - 1
+  - one
