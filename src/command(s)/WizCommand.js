@@ -80,13 +80,13 @@ class WizCommand {
      * If command is only to be used by bot owners
      * @type {Boolean}
      */
-    this.owneronly = options.owneronly || false;
+    this.ownerOnly = options.ownerOnly || false;
 
      /**
       * If command is only to be used by bot devs
       * @type {Boolean}
       */
-     this.devonly = options.devonly || false;
+     this.devOnly = options.devOnly || false;
 
     /**
      * If command is enabled
@@ -178,8 +178,12 @@ class WizCommand {
    * @param {Boolean} ownerOverride 
    */
   checkUserPermissions(message, ownerOverride = true) {
-    if (!this.ownerOnly && !this.userPermissions) return true;
+    if (!this.ownerOnly && !this.devOnly && !this.userPermissions) return true;
     if (ownerOverride && this.client.isOwner(message.author)) return true;
+    if (this.devOnly && this.client.isDev(message.author)) return true;
+    if (this.devOnly && !this.client.isDev(message.author)) {
+      return false;
+    }
     if (this.ownerOnly && !this.client.isOwner(message.author)) {
       return false;
     }
@@ -296,8 +300,8 @@ class WizCommand {
       throw new TypeError('Command ownerOnly is not a Boolean');
 
     // Dev only
-    if (options.devonly && typeof options.devonly != 'boolean')
-      throw new TypeError('Command devonly is not a Boolean')
+    if (options.devOnly && typeof options.devOnly != 'boolean')
+      throw new TypeError('Command devOnly is not a Boolean')
 
     // Disabled
     if (options.disabled && typeof options.disabled !== 'boolean') 
